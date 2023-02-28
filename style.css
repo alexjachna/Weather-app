@@ -57,14 +57,31 @@
     outline: none;
 }
 
-.inner-text {
+#container p {
     color: white;
-    font-size: 96px;
-    font-weight: 900;
-    transform: translateX(0);
+}
+
+.city {
+    padding-top: 25px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 24px;
+}
+
+.temp {
+    padding: 20px 0;
+    font-size: 102px;
+    text-shadow: 2px 5px 25px white;
     transition: 1s;
 }
 
-#container:hover .inner-text {
-    transform: translateY(60px);
+.status {
+    font-size: 40px;
+}
+
+#container:hover .temp {
+    -webkit-transform: scale(1.2);
 }
