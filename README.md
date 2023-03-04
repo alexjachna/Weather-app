@@ -12,3 +12,10 @@ First submission contains the basic form of HTML/CSS.
 The second submission contains a fully functional app, that allows the user to input a city, which in return, gives the temperature and the status of given city.
 
 ![image](https://user-images.githubusercontent.com/57778785/221768245-9deda424-05b6-4863-a377-9a802ff89bbc.png)
+
+
+-----------------------
+
+Third submission includes the HTML/CSS of a custom settings menu, which contains options like display (dark mode and light mode), temperature (Celsius & Fahrenheit) and time (Date & Time)
+
+![image](https://user-images.githubusercontent.com/57778785/222880614-221c2b3f-6ec7-4dc4-97db-4c542f6a5ada.png)
