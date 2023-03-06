@@ -84,10 +84,20 @@
     height: 50px;
     border: none;
     border-radius: 25px 0 25px 0;
-    background-color: rgba(63, 62, 62, 0.4);
     padding: 0 25px;
     font-size: 18px;
+    transition: 0.5s;
+}
+
+.search-box.dark-mode {
+    background-color: rgba(63, 62, 62, 0.4);
     color: white;
+}
+
+.search-box.light-mode {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    color: black;
 }
 
 .search-box:focus {
@@ -125,8 +135,6 @@
     right: 25px;
     width: 200px;
     height: 230px;
-    background-color: rgba(65, 63, 63, 0.2);
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     display: flex;
     justify-content: space-evenly;
@@ -134,15 +142,35 @@
     flex-direction: column;
 }
 
+#settings.dark-mode {
+    background-color: rgba(65, 63, 63, 0.2);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+#settings.light-mode {
+    background-color: rgba(214, 214, 214, 0.8);
+    box-shadow: 0 0 15px 5px rgba(214, 214, 214, 0.7);
+    
+}
+
 #settings:hover .settings-title {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .settings-title {
-    color: white;
     font-size: 24px;
-    opacity: 0.3;
     transition: 0.5s;
+}
+
+.settings-title.dark-mode {
+    color: white;
+    opacity: 0.4;
+}
+
+.settings-title.light-mode {
+    color: black;
+    font-weight: 700;
+    opacity: 0.6;
 }
 
 .filter {
@@ -157,13 +185,23 @@
 .left, .right {
     flex-basis: 45%;
     height: 85%;
-    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.left.dark-mode, .right.dark-mode {
+    background-color: rgba(0, 0, 0, 0.6);
     color: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+}
+
+.left.light-mode, .right.light-mode {
+    background-color: rgba(211, 211, 211, 0.6);
+    color: rgba(17, 17, 17, 0.8);
+    font-weight: 700;
 }
 
 .left {
@@ -174,7 +212,11 @@
     border-radius: 0 10px 10px 0;
 }
 
-.active {
+.active.dark-mode {
     box-shadow: 0 0 15px 1px rgba(39, 39, 39, 0.8) inset;
     cursor: default;
+}
+
+.active.light-mode {
+    box-shadow: 0 0 15px 1px rgba(109, 109, 109, 0.3) inset;
 }

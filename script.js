@@ -73,67 +73,21 @@ function displayChange(selectedButton) {
 
     selectedButton.classList.add('active');
 
-    // All elements to change during dark/light mode switch
-    let screen = document.querySelector('#screen');
-    let containerImage = document.querySelector('#container');
-    let bottomText = document.querySelector('.bottom-text');   
-    let cityText = document.querySelector('.city'); 
-    let dateText = document.querySelector('.date'); 
-    let tempText = document.querySelector('.temp'); 
-    let statusText = document.querySelector('.status');
-
-    let itemList = [];
-    itemList.push(screen, bottomText);
-    console.log(itemList);
-    // /itemList.push.apply(itemList, containerText);
-
     if (selectedButton.id == 'dark') {
-        screen.classList.remove('light-mode');
-        screen.classList.add('dark-mode');
+        const elementsList = document.querySelectorAll('.light-mode');
 
-        containerImage.classList.remove('light-mode');
-        containerImage.classList.add('dark-mode');
-
-        bottomText.classList.remove('light-mode');
-        bottomText.classList.add('dark-mode');
-
-        cityText.classList.remove('light-mode');
-        cityText.classList.add('dark-mode');
-
-        dateText.classList.remove('light-mode');
-        dateText.classList.add('dark-mode');
-
-        tempText.classList.remove('light-mode');
-        tempText.classList.add('dark-mode');
-
-        statusText.classList.remove('light-mode');
-        statusText.classList.add('dark-mode');
-        // for (var i = 0; i < itemList.length; i++) {
-        //     // itemList[i].classList.remove('light-mode')
-        //     itemList[i].classList.add('dark-mode');
-        // }
+        elementsList.forEach((element) => {
+            element.classList.remove('light-mode');
+            element.classList.add('dark-mode');
+        })
     }
     else {
-        screen.classList.remove('dark-mode');
-        screen.classList.add('light-mode');
+        const elementsList = document.querySelectorAll('.dark-mode');
 
-        containerImage.classList.remove('dark-mode');
-        containerImage.classList.add('light-mode');
-
-        bottomText.classList.remove('dark-mode');
-        bottomText.classList.add('light-mode');
-
-        cityText.classList.remove('dark-mode');
-        cityText.classList.add('light-mode');
-
-        dateText.classList.remove('dark-mode');
-        dateText.classList.add('light-mode');
-
-        tempText.classList.remove('dark-mode');
-        tempText.classList.add('light-mode');
-
-        statusText.classList.remove('dark-mode');
-        statusText.classList.add('light-mode');
+        elementsList.forEach((element) => {
+            element.classList.remove('dark-mode')
+            element.classList.add('light-mode')
+        })
     }
 }
 
