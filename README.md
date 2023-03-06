@@ -23,3 +23,7 @@ Third submission includes the HTML/CSS of a custom settings menu, which contains
 Fourth submission includes all settings operable at a minimal state. Temperature measurement is accurate (using formula rather than API), but the date change uses current date, rather than obtaining the info for given city.
 
 ![image](https://user-images.githubusercontent.com/57778785/223014878-c41cd348-25ef-4b91-b91f-ef4bb10c8c91.png)
+
+Fifth submission contains updated light/dark mode setting, with efficient/updated JavaScript to be able to easily update/add more elements to the dark/light mode scenes.
+
+https://i.imgur.com/B6gxfjF.gif
