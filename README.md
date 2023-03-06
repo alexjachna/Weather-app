@@ -19,3 +19,7 @@ The second submission contains a fully functional app, that allows the user to i
 Third submission includes the HTML/CSS of a custom settings menu, which contains options like display (dark mode and light mode), temperature (Celsius & Fahrenheit) and time (Date & Time)
 
 ![image](https://user-images.githubusercontent.com/57778785/222880614-221c2b3f-6ec7-4dc4-97db-4c542f6a5ada.png)
+
+Fourth submission includes all settings operable at a minimal state. Temperature measurement is accurate (using formula rather than API), but the date change uses current date, rather than obtaining the info for given city.
+
+![image](https://user-images.githubusercontent.com/57778785/223014878-c41cd348-25ef-4b91-b91f-ef4bb10c8c91.png)
