@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
+    transition: 1.0s;
 }
 
 #screen.dark-mode {
@@ -44,30 +44,65 @@
 #container {
     width: 600px;
     height: 700px;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#page-1-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 92%;
+}
+
+#dots-selector {
+    flex-basis: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin-left: 8px;
     border-radius: 25px;
-    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.5) inset, 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(214, 214, 214, 0.2);
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: rgba(214, 214, 214, 0.9);
 }
 
 #container.dark-mode {
     transition: 0.5s;
     background-image: url(./images/redwoods.jpg);
     background-size: cover;
-    
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.5) inset, 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 #container.light-mode {
     transition: 0.5s;
     background-image: url(./images/brightnature.jpg);
     background-size: cover;
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.3) inset, 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
 
-#container:hover {
+#container:hover.dark-mode {
     box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.5) inset, 0 0 15px 25px rgba(0, 0, 0, 0.2);
 }
+
+#container:hover.light-mode {
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.4) inset, 0 0 25px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 .content.dark-mode {
     transition: 0.5s;
@@ -95,9 +130,9 @@
 }
 
 .search-box.light-mode {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     font-weight: 700;
-    color: black;
+    color: white;
 }
 
 .search-box:focus {
@@ -110,6 +145,13 @@
     font-weight: bold;
 }
 
+.desc {
+    padding: 20px 0;
+    font-size: 48px;
+    text-shadow: 2px 5px 25px white;
+    text-align: center;
+}
+
 .date {
     font-size: 24px;
 }
@@ -118,7 +160,6 @@
     padding: 20px 0;
     font-size: 102px;
     text-shadow: 2px 5px 25px white;
-    transition: 1s;
 }
 
 .status {

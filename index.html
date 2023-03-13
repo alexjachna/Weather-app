@@ -11,13 +11,25 @@
     <body>
         <div id="screen" class="dark-mode">
             <div id="container" class="dark-mode">
-                <input type="text" autocomplete="off" class="search-box dark-mode"
-                placeholder="Search for a city..."/>
-                <p class="content city dark-mode">New York, USA</p>
-                <p class="content date dark-mode"></p>
-                <p class="content temp dark-mode">15°C</p>
-                <p class="content status dark-mode">Clear</p>
+                <div id="page-1-content">
+                    <input type="text" autocomplete="off" class="search-box dark-mode"
+                    placeholder="Search for a city..."/>
+                    <p class="content city dark-mode">Welcome!</p>
+
+                    <p class="content desc dark-mode">Use the search bar to enter in a city name</p>
+
+                    <p class="content date dark-mode"></p>
+                    <p class="content temp dark-mode"></p>
+                    <p class="content status dark-mode"></p>
+                </div>
+                
+
+                <div id="dots-selector">
+                    <div id="page-1-dot" class="dot active"></div>
+                    <div id="page-2-dot" class="dot"></div>
+                </div>   
             </div>
+
             <p class="bottom-text dark-mode">Made by Alex Jachna.</p>
 
             <div id="settings" class="dark-mode">

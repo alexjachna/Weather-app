@@ -8,6 +8,8 @@ searchbox.addEventListener('keypress', setQuery);
 
 function setQuery(evt) {
     if (evt.keyCode == 13) {
+        document.getElementsByClassName('desc')[0].style.display = "none";
+
         getResults(searchbox.value);
     }
 }
