@@ -20,10 +20,21 @@ Third submission includes the HTML/CSS of a custom settings menu, which contains
 
 ![image](https://user-images.githubusercontent.com/57778785/222880614-221c2b3f-6ec7-4dc4-97db-4c542f6a5ada.png)
 
+-----------------------
+
 Fourth submission includes all settings operable at a minimal state. Temperature measurement is accurate (using formula rather than API), but the date change uses current date, rather than obtaining the info for given city.
 
 ![image](https://user-images.githubusercontent.com/57778785/223014878-c41cd348-25ef-4b91-b91f-ef4bb10c8c91.png)
 
+-----------------------
+
 Fifth submission contains updated light/dark mode setting, with efficient/updated JavaScript to be able to easily update/add more elements to the dark/light mode scenes.
 
 https://i.imgur.com/B6gxfjF.gif
+
+----------------------
+
+Sixth submission will contain a page selector, along with a 2nd page for users to select. The second page will contain extra info about the weather in a nice interface.
+
+![image](https://user-images.githubusercontent.com/57778785/224592038-ab4e56aa-c07b-44c8-8b1c-e90a3d10077e.png)
+
