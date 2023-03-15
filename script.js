@@ -8,9 +8,16 @@ searchbox.addEventListener('keypress', setQuery);
 
 function setQuery(evt) {
     if (evt.keyCode == 13) {
-        document.getElementsByClassName('desc')[0].style.display = "none";
+        if (searchbox.value.length > 0) {
+            document.getElementsByClassName('dot')[0].style.display = "block";
+            document.getElementsByClassName('dot')[1].style.display = "block";
+            document.getElementsByClassName('desc')[0].style.display = "none";
 
-        getResults(searchbox.value);
+            getResults(searchbox.value);
+        } else {
+            document.getElementsByClassName('desc')[0].innerHTML =
+            "Please enter in a valid city.";
+        }    
     }
 }
 
@@ -32,6 +39,8 @@ function displayResults(weather) {
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
     let time = date.toLocaleTimeString();
+    let sunrise = new Date(weather.sys.sunrise * 1000).toTimeString();
+    let sunset = new Date(weather.sys.sunset * 1000).toTimeString();
     let currentDate = `${day}-${month}-${year}`;
 
     // City name change
@@ -46,10 +55,8 @@ function displayResults(weather) {
     else {
         document.getElementsByClassName('date')[0].innerHTML = time;
     }
-    
 
-
-
+    // Page 1 Items
     // Temperature Change
     if (document.querySelector('#celsius').classList.contains('active')) {
         document.getElementsByClassName('temp')[0].innerHTML = 
@@ -63,6 +70,13 @@ function displayResults(weather) {
     // Weather Status change
     document.getElementsByClassName('status')[0].innerHTML = 
     weather.weather[0].description;
+
+    // Page 2 Items
+    // Sunrise/Sunset change
+    document.getElementsByClassName('sunrise')[0].innerHTML = 
+    "Sunrise: " + sunrise.slice(0, 5) + " AM";
+    document.getElementsByClassName('sunset')[0].innerHTML = 
+    "Sunset: " + sunset.slice(0, 5)  + " PM";
 }
 
 
@@ -127,4 +141,25 @@ function timeChange(selectedButton) {
 
     // Change given time perspective
     getResults(searchbox.value);
+}
+
+function changePage(pageOption) {
+    if (pageOption.id == 'page-1-dot') {
+        // Change the actual page content
+        document.querySelector('#page-1-content').style.display = "flex";
+        document.querySelector('#page-2-content').style.display = "none";
+
+        // Change the dot color
+        pageOption.classList.add('active');
+        document.querySelector('#page-2-dot').classList.remove('active');
+    }
+    else if (pageOption.id == 'page-2-dot') {
+        // Change the actual page content
+        document.querySelector('#page-1-content').style.display = "none";
+        document.querySelector('#page-2-content').style.display = "flex";
+
+        // Change the dot color
+        pageOption.classList.add('active');
+        document.querySelector('#page-1-dot').classList.remove('active');
+    }
 }

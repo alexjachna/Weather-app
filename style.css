@@ -49,14 +49,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #page-1-content {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-basis: 92%;
+    transition: 2s;
+}
+
+#page-2-content {
+    
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 92%;
+}
+
+.page {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.page.active {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 #dots-selector {
@@ -67,6 +90,7 @@
 }
 
 .dot {
+    display: none;
     width: 10px;
     height: 10px;
     margin-left: 8px;
@@ -100,9 +124,6 @@
 #container:hover.light-mode {
     box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.4) inset, 0 0 25px 25px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 .content.dark-mode {
     transition: 0.5s;
@@ -149,7 +170,6 @@
     padding: 20px 0;
     font-size: 48px;
     text-shadow: 2px 5px 25px white;
-    text-align: center;
 }
 
 .date {
@@ -164,6 +184,10 @@
 
 .status {
     font-size: 40px;
+}
+
+.sun {
+    font-size: 48px;
 }
 
 #container:hover .temp {
