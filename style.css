@@ -53,8 +53,6 @@
 }
 
 #page-1-content {
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,22 +62,27 @@
 }
 
 #page-2-content {
-    
     display: none;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 92%;
+    font-size: 48px;
+}
+
+#sun-times, .feels-like, #min-max-temps {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis: 33%;
+}
+
+#sunrise, #sunset {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: 92%;
-}
-
-.page {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.page.active {
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
+    flex-basis: 50%;
 }
 
 #dots-selector {

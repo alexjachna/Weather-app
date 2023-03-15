@@ -57,14 +57,35 @@ function displayResults(weather) {
     }
 
     // Page 1 Items
-    // Temperature Change
+    // Temperature Changes (Feels_Like, Max/Min Temp)
     if (document.querySelector('#celsius').classList.contains('active')) {
+        // Main temp
         document.getElementsByClassName('temp')[0].innerHTML = 
-        Math.floor(weather.main.feels_like) + "°C";
+        Math.floor(weather.main.temp) + "°C";
+
+        // Feels-like temp
+        document.getElementsByClassName('feels-like')[0].innerHTML = 
+        "Feels Like: " + Math.floor(weather.main.feels_like) + "°C";
+        // max temp
+        document.getElementsByClassName('temp-max')[0].innerHTML = 
+        "Today's Max: " + Math.floor(weather.main.temp_max) + "°C";
+        // min temp
+        document.getElementsByClassName('temp-min')[0].innerHTML = 
+        "Today's Min: " + Math.floor(weather.main.temp_min) + "°C";
     }
     else {
         document.getElementsByClassName('temp')[0].innerHTML = 
-        Math.floor((weather.main.feels_like - 32) * 0.55) + "°F";
+        Math.floor((weather.main.temp * 1.8) + 32) + "°F";
+
+        document.getElementsByClassName('feels-like')[0].innerHTML = 
+        "Feels Like: " + Math.floor((weather.main.feels_like * 1.8) + 32) + "°F";
+
+        // max temp
+        document.getElementsByClassName('temp-max')[0].innerHTML = 
+        "Today's Max: " + Math.floor((weather.main.temp_max * 1.8) + 32) + "°F";
+        // min temp
+        document.getElementsByClassName('temp-min')[0].innerHTML = 
+        "Today's Min: " + Math.floor((weather.main.temp_min * 1.8) + 32) + "°F";
     }
     
     // Weather Status change
@@ -74,9 +95,10 @@ function displayResults(weather) {
     // Page 2 Items
     // Sunrise/Sunset change
     document.getElementsByClassName('sunrise')[0].innerHTML = 
-    "Sunrise: " + sunrise.slice(0, 5) + " AM";
+    sunrise.slice(0, 5) + " AM";
     document.getElementsByClassName('sunset')[0].innerHTML = 
-    "Sunset: " + sunset.slice(0, 5)  + " PM";
+    sunset.slice(0, 5)  + " PM";
+
 }
 
 
